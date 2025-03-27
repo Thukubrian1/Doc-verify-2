@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Payment Form</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .payment-tabs {
+            display: flex;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 1.5rem;
+        }
+        
+        .payment-tab {
+            padding: 0.75rem 1.25rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .payment-tab.active {
+            color: #3b82f6;
+            /* Changed to blue */
+            border-bottom-color: #3b82f6;
+            /* Changed to blue */
+        }
+        
+        .payment-content {
+            display: none;
+        }
+        
+        .payment-content.active {
+            display: block;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .input-field {
+            width: 100%;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+        }
+        
+        .card-input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .continue-button {
+            width: 100%;
+            background-color: #3b82f6;
+            /* Changed to blue */
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .continue-button:hover {
+            background-color: #2563eb;
+            /* Changed to darker blue */
+        }
+        
+        .notification {
+            background-color: #f3f4f6;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .notification-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            background-color: #3b82f6;
+            /* Changed to blue */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .radio-option {
+            flex: 1;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <div class="container">
+        <h1 class="text-3xl font-bold text-center mb-8">Transfer</h1>
+
+
+
+        <form id="payment-form">
+            <!-- Mpesa Payment -->
+            <div class="payment-content active" id="mpesa-content">
+                <div class="notification">
+                    <div class="notification-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <div class="text-gray-700">
+                        A transaction receipt will be sent to your phone. Please keep it safe.
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Member ID/Email</label>
+                    <input type="tel" class="input-field" placeholder="34-XX-XXX-XXX" pattern="0[0-9]{9}">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Amount (KES)</label>
+                    <input type="number" class="input-field" placeholder="Enter amount">
+                </div>
+            </div>
+
+            <a href="success transfer.html" target="_blank">
+                <button type="button" class="continue-button">Transfer</button>
+            </a>
+        </form>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.payment-tab');
+        const contents = document.querySelectorAll('.payment-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Update active content
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === `${target}-content`) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Form submission (for demo purposes)
+        const continueButton = document.querySelector('.continue-button');
+        continueButton.addEventListener('click', () => {
+            // Get active payment method
+            const activeTab = document.querySelector('.payment-tab.active').getAttribute('data-tab');
+            alert(`Processing ${activeTab} payment. In a real application, this would submit the form.`);
+        });
+    </script>
+</body>
+
+</html>

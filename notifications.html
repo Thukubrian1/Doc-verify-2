@@ -11,45 +11,7 @@
     <!-- PWA Meta Tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .certificate-border {
-            border: 10px solid #0056b3;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .watermark {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-20deg);
-            opacity: 0.1;
-            font-size: 120px;
-            font-weight: bold;
-            color: #0056b3;
-            z-index: 0;
-        }
-        
-        .barcode {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50px;
-            background-color: white;
-            border: 1px solid #333;
-        }
-        
-        .barcode-line {
-            width: 2px;
-            height: 40px;
-            background-color: black;
-            margin: 0 1px;
-        }
-    </style>
+
     <style>
         /* Custom styles for the app */
         
@@ -79,7 +41,6 @@
 </head>
 
 <body class="bg-gray-50">
-
     <!-- Desktop Navigation Drawer - Hidden on mobile -->
     <div id="desktop-drawer" class="desktop-drawer fixed top-0 left-0 h-full w-64 bg-blue-800 shadow-lg transform transition-transform duration-300 z-40 hidden md:block border-r border-gray-200">
         <div class="p-5 border-b border-gray-200">
@@ -142,6 +103,7 @@
                     </button>
                 </div>
             </nav>
+
             <nav class="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8" aria-label="Global">
                 <div class="me-5 lg:me-0 lg:hidden">
                     <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">DocVerif</a>
@@ -205,7 +167,7 @@
                                             <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
                                             <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg> My Account
                                     </a>
-                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="login.html">
+                                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" href="logon_ag.html">
                                         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" fill="none"
                                             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -218,11 +180,108 @@
                     </div>
                 </div>
             </nav>
+            
         </header>
         <!-- end Desktop Top Navigation Drawer -->
         <!-- ========== END HEADER ========== -->
 
+        <!-- Content Area -->
+        <div class="max-w-[85rem] px-4 py-6 sm:px-6 lg:px-8 lg:py-6 mx-auto">
+            <div class="mx-auto max-w-2xl">
+                <!--  Notification  Section -->
+                <!--  Pass Table Section -->
+                <div class="mt-8 overflow-hidden bg-white border border-gray-200 rounded-xl">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="sm:flex sm:items-center sm:justify-between">
+                            <div>
+                                <p class="text-base font-bold text-gray-900">Recent notifications</p>
+                                <p class="mt-1 text-sm font-medium text-gray-500">Leverage your mobile app for improved business notifications.</p>
+                            </div>
 
+                        </div>
+
+                        <div class="flow-root mt-8">
+                            <div class="-my-5 divide-y divide-gray-100">
+                                <div class="py-5">
+                                    <div class="flex items-center">
+                                        <div class="relative flex-shrink-0">
+                                            <img class="object-cover w-10 h-10 rounded-full" src="https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/previews/settings/1/rareblocks-logo.png" alt="" />
+                                        </div>
+
+                                        <div class="ml-4">
+                                            <p class="text-sm font-bold text-blue-600">Your Comprehensive Car Insurance for KCD 123A expires on 27-Apr-2025.</p>
+                                            <p class="mt-1 text-sm font-medium text-gray-500">10:31 am | 24-Mar-2025</p>
+                                        </div>
+
+                                        <div class="ml-auto">
+                                            <a href="renewals_details.html" title="" class="text-sm font-medium text-blue-600 transition-all duration-200 hover:text-blue-600"> Renew </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="py-5">
+                                    <div class="flex items-center">
+                                        <div class="relative flex-shrink-0">
+                                            <img class="object-cover w-10 h-10 rounded-full" src="https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/previews/settings/1/astrona-logo.png" alt="" />
+                                        </div>
+
+                                        <div class="ml-4">
+                                            <p class="text-sm font-bold text-gray-900">You have 10 pending insurance documents needing review before 27-Apr-2025</p>
+                                            <p class="mt-1 text-sm font-medium text-gray-500">10:30 am | 24-Mar-2025</p>
+                                        </div>
+
+                                        <div class="ml-auto">
+                                            <a href="All_Trans.html" title="" class="text-sm font-medium text-gray-600 transition-all duration-200 hover:text-blue-600"> View </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End  Notification  Section -->
+            </div>
+            <div id="tabs-with-underline-5" class="hidden" role="tabpanel" aria-labelledby="tabs-with-underline-item-3">
+                <!--  Notification  Section -->
+
+                <div class="mt-6">
+                    <p class="text-base font-bold text-gray-900">Renew license</p>
+                    <p class="mt-1 text-sm font-medium text-gray-500">Update your annual license</p>
+                </div>
+
+                <form action="#" method="POST" class="max-w-3xl mt-12">
+                    <div class="space-y-8">
+
+
+
+                        <div class="sm:grid sm:grid-cols-3 sm:gap-5 sm:items-start">
+                            <div class="sm:mt-px sm:pt-2">
+                                <label for="" class="block text-sm font-bold text-gray-900"> IRA license </label>
+
+                            </div>
+                            <div class="mt-2 sm:mt-0 sm:col-span-2">
+                                <div class="relative flex">
+                                    <div class="inline-flex items-center px-3 text-gray-900 border border-r-0 border-gray-300 rounded-l-lg bg-gray-50 sm:text-sm">Active</div>
+
+                                    <input type="text" name="" id="" placeholder="" value="IRA1234/24" class="border flex-1 block w-full min-w-0 px-4 py-3 placeholder-gray-500 border-gray-300 rounded-none rounded-r-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-6 sm:mt-12">
+                        <button type="submit" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold leading-5 text-white transition-all duration-200 bg-gray-200 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 hover:bg-blue-500">
+                            Update
+                        </button>
+                    </div>
+                </form>
+                <!-- End  Notification  Section -->
+            </div>
+            </div>
+        </div>
+        <!-- End Content Area -->
     </div>
 
     <!-- Mobile Bottom Navigation -->
@@ -245,7 +304,7 @@
                 <svg class="w-5 h-5 mb-2 text-gray-500 group-hover:text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12.25V1m0 11.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M4 19v-2.25m6-13.5V1m0 2.25a2.25 2.25 0 0 0 0 4.5m0-4.5a2.25 2.25 0 0 1 0 4.5M10 19V7.75m6 4.5V1m0 11.25a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM16 19v-2"/>
                 </svg>
-                <span class="text-sm text-gray-500 group-hover:text-blue-600">Settings</span>
+                <span class="text-sm text-gray-500 group-hover:text-blue-600">Notifications</span>
             </button>
             <button type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group">
                 <svg class="w-5 h-5 mb-2 text-gray-500 group-hover:text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -257,146 +316,6 @@
     </div>
 
     <!-- JavaScript for PWA Functionality -->
-    <div class="pt-10 flex flex-row items-center justify-center gap-4">
-        <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-          Download
-            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m5 11 4-7"></path>
-                <path d="m19 11-4-7"></path>
-                <path d="M2 11h20"></path>
-                <path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8c.9 0 1.8-.7 2-1.6l1.7-7.4"></path>
-                <path d="m9 11 1 9"></path>
-                <path d="M4.5 15.5h15"></path>
-                <path d="m15 11-1 9"></path>
-            </svg>
-        </button>
-        <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-           Share
-            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-            </svg>
-        </button>
-        <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-           Print
-            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-            </svg>
-        </button>
-    </div>
-
-    <div class="pt-10 flex flex-col items-center justify-center">
-
-        <div class="relative w-f max-w-4xl bg-white certificate-border rounded-2xl p-12">
-            <div class="watermark">KNCCI</div>
-
-            <div class="relative z-10">
-                <!-- KNCCI Logo and Header -->
-                <div class="flex justify-between items-center mb-8">
-                    <div>
-
-                        <img width="150" height="75" src="KNCCINew.png" alt="">
-                    </div>
-                    <div class="text-right">
-                        <h1 class="text-3xl font-bold text-blue-700">CERTIFICATE OF ORIGIN</h1>
-                        <p class="text-sm text-gray-600">ORIGINAL DOCUMENT</p>
-                    </div>
-                </div>
-
-                <!-- Existing Certificate Content -->
-                <div class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <div>
-                            <h2 class="text-lg font-bold text-gray-700">1. Exporter (Name & Address)</h2>
-                            <p class="text-sm">[EXPORTER NAME]</p>
-                            <p class="text-sm">[EXPORTER ADDRESS]</p>
-                        </div>
-                        <div class="md:text-right">
-                            <p class="text-sm">Certificate No. [CERTIFICATE NUMBER]</p>
-                        </div>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-4 border-t pt-4">
-                        <div>
-                            <h2 class="text-lg font-bold text-gray-700">2. Consignee (Name, Full Address & Country)</h2>
-                            <p class="text-sm">[CONSIGNEE NAME]</p>
-                            <p class="text-sm">[CONSIGNEE ADDRESS]</p>
-                            <p class="text-sm">[COUNTRY]</p>
-                        </div>
-                        <div>
-                            <div class="grid md:grid-cols-2 gap-2">
-                                <div>
-                                    <p class="text-sm text-gray-600">3. Departure Date</p>
-                                    <p class="text-sm font-semibold">[DATE]</p>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-600">4. Vessel/Flight</p>
-                                    <p class="text-sm font-semibold">[VESSEL/FLIGHT]</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-4 border-t pt-4">
-                        <div>
-                            <p class="text-sm text-gray-600">5. Port of Discharge</p>
-                            <p class="text-sm font-semibold">[PORT]</p>
-                        </div>
-                        <div>
-                            <p class="text-sm text-gray-600">6. Country of Final Destination</p>
-                            <p class="text-sm font-semibold">[COUNTRY]</p>
-                        </div>
-                    </div>
-
-                    <div class="border-t pt-4">
-                        <p class="text-sm text-gray-600">7. Country of Origin of Goods</p>
-                        <p class="text-sm font-semibold">[COUNTRY]</p>
-                    </div>
-
-                    <div class="border-t pt-4">
-                        <div class="grid md:grid-cols-3 gap-4">
-                            <div>
-                                <p class="text-sm text-gray-600">9. Marks & Numbers</p>
-                                <p class="text-sm">[MARKS]</p>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-600">10. No. & Kind of Packages</p>
-                                <p class="text-sm">[PACKAGES]</p>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-600">11. Quantity & Unit</p>
-                                <p class="text-sm">[QUANTITY]</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="border-t pt-4">
-                        <h3 class="text-sm font-bold mb-2">12. Certification by the Competent Authority</h3>
-                        <p class="text-xs mb-4">We hereby certify that the goods specified originate in the country shown and to the best of our knowledge are correct.</p>
-
-                        <div class="grid md:grid-cols-2 gap-4 mt-6">
-                            <div>
-                                <p class="text-sm text-gray-600">Authorized Signature:</p>
-                                <p class="text-sm">[OFFICIAL SIGNATURE]</p>
-                            </div>
-                            <div class="md:text-right">
-                                <p class="text-sm text-gray-600">Date:</p>
-                                <p class="text-sm">[OFFICIAL DATE]</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Barcode at Bottom Left Corner -->
-                <div class="border-t pt-4">
-                    <img width="150" height="75" src="barcode.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const drawerToggle = document.getElementById('drawer-toggle');
