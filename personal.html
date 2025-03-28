@@ -85,20 +85,58 @@
 
 
                     <div class="mb-4 sm:mb-8">
-                        <label for="membership-select" class="block mb-2 text-sm font-medium dark:text-white">Account Type?</label>
-                        <select id="membership-select" class="block w-full py-3 pl-4 pr-10 border-gray-300 rounded-lg focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm" onchange="redirectUser(this.value)">
+                        <label for="account-type-select" class="block mb-2 text-sm font-medium dark:text-white">Account Type?</label>
+                        <select id="account-type-select" class="block w-full py-3 pl-4 pr-10 border-gray-300 rounded-lg focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm" onchange="redirectUser(this.value)">
                             <option value="">Select account type</option>
                             <option value="personal.html">Personal</option>
                             <option value="business.html"> Business</option>
                         </select>
                     </div>
 
+
                     <script>
-                        function redirectUser(url) {
-                            if (url) {
-                                window.location.href = url;
+                        // Save selected options to localStorage
+                        document.getElementById('membership-select').addEventListener('change', function() {
+                            localStorage.setItem('selectedMembership', this.value);
+                        });
+
+                        document.getElementById('account-type-select').addEventListener('change', function() {
+                            localStorage.setItem('selectedAccountType', this.value);
+                        });
+
+                        // Restore selected options on page load
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const membershipSelect = document.getElementById('membership-select');
+                            const accountTypeSelect = document.getElementById('account-type-select');
+
+                            const savedMembership = localStorage.getItem('selectedMembership');
+                            const savedAccountType = localStorage.getItem('selectedAccountType');
+
+                            if (savedMembership) {
+                                membershipSelect.value = savedMembership;
+                            }
+
+                            if (savedAccountType) {
+                                accountTypeSelect.value = savedAccountType;
+                            }
+                        });
+
+                        // Redirect function
+                        function redirectUser(selectElement) {
+                            const selectedValue = selectElement.value;
+                            if (selectedValue) {
+                                window.location.href = selectedValue;
                             }
                         }
+
+                        // Add event listeners to selects for redirection
+                        document.getElementById('membership-select').addEventListener('change', function() {
+                            redirectUser(this);
+                        });
+
+                        document.getElementById('account-type-select').addEventListener('change', function() {
+                            redirectUser(this);
+                        });
                     </script>
 
                     <div class="mb-4 sm:mb-8">

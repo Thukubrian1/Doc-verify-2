@@ -72,15 +72,28 @@
                         </p>
                     </div>
                     <div class="mb-4 sm:mb-8">
-                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">The value of the shipment(USD/KES)</label>
+                        <label for="membership-select" class="block mb-2 text-sm font-medium dark:text-white">Select Currency</label>
+                        <select id="membership-select" class="block w-full py-3 pl-4 pr-10 border-gray-300 rounded-lg focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm" onchange="redirectUser(this.value)">
+                            <option value="">Select currency</option>
+                            <option value="member.html">United States Dollar(USD)</option>
+                            <option value="non-member.html">Kenyan Shilling(KSH)</option>
+                            <option value="non-member.html">British Pound Sterling (GBP)</option>
+                            <option value="non-member.html">Japanese Yen (JPY)</option>
+                            <option value="non-member.html">Australian Dollar (AUD)</option>
+                            <option value="non-member.html">Canadian Dollar (CAD)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4 sm:mb-8">
+                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">The value of the shipment</label>
                         <input type="email" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                            placeholder="eg $200 or KES 25,000">
+                            placeholder="">
                     </div>
 
                     <div class="mb-4 sm:mb-8">
                         <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Billable Amount</label>
                         <input type="email" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                            placeholder="eg $10 or KES 16,000">
+                            placeholder="">
                     </div>
 
                     <div class="mt-6 grid">
