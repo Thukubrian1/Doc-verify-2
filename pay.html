@@ -423,17 +423,24 @@
                          <!-- Wallet Payment -->
                          <div class="payment-content" id="wallet-content">
                             <div class="input-group">
-                                <label class="input-label">Wallet Id</label>
-                                <input type="text" class="input-field" placeholder="Enter wallet Id">
-                            </div>
-            
-            
-                            <div class="input-group">
                                 <label class="input-label">Amount</label>
-                                <input type="number" class="input-field" placeholder="Enter amount">
+                                <input type="number" id="amountInput" class="input-field" placeholder="Enter amount">
                             </div>
+                            <p id="message" class="text-red-500 font-bold hidden">Insufficient funds in your wallet!</p>
+                        </div>
 
-                         </div>
+                         <script>
+                            document.getElementById("amountInput").addEventListener("input", function() {
+                                let amount = parseFloat(this.value);
+                                let message = document.getElementById("message");
+                                
+                                if (amount > 2000) {
+                                    message.classList.remove("hidden");
+                                } else {
+                                    message.classList.add("hidden");
+                                }
+                            });
+                        </script>
             
                         <a href="success payment.html" target="_blank">
                             <button type="button" class="continue-button">Continue</button>

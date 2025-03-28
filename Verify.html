@@ -7,59 +7,12 @@
     <title>DocVerif-Agent Register</title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="style.css">
-
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DocVerif-compare</title>
-        <link rel="stylesheet" href="output.css">
-
-
-
-        <!-- ========== HEADER ========== -->
-        <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b text-sm py-2.5 sm:py-4 dark:bg-slate-900 dark:border-gray-700">
-            <nav class="max-w-7xl flex basis-full items-center w-full mx-auto px-4 sm:px-6 lg:px-8" aria-label="Global">
-                <div class="me-5 md:me-8">
-                    <a class="flex-none text-blue-600 text-xl font-semibold dark:text-white" href="#" aria-label="Brand">DocVerif</a>
-                </div>
-
-                <div class="w-full flex items-center justify-end ms-auto sm:justify-between sm:gap-x-3 sm:order-3">
-                    <div class="sm:hidden">
-                        <button type="button" class="inline-flex flex-shrink-0 justify-center items-center gap-2 size-[38px] rounded-full font-medium bg-white text-gray-700 align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs dark:bg-gray-800 dark:hover:bg-slate-800 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800">
-                            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="m21 21-4.3-4.3" /></svg>
-                        </button>
-                    </div>
-
-
-                    <!-- Progress -->
-                    <div class="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                        <div class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500" style="width: 25%"></div>
-                    </div>
-                    <!-- End Progress -->
-
-                </div>
-            </nav>
-
-        </header>
-
-
-        <!-- ========== END HEADER ========== -->
-
-    </head>
 </head>
 
 <body class="bg-gray-50 dark:bg-slate-900">
-
     <!-- Comment Form -->
     <div class="max-w-[85rem] px-4 py-6 sm:px-6 lg:px-8 lg:py-6 mx-auto">
         <div class="mx-auto max-w-2xl">
-
-
             <!-- Card -->
             <div class="mt-15 p-4 relative z-10 bg-white border border-gray-200 rounded-xl sm:mt-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700">
                 <form>
@@ -68,22 +21,55 @@
                             Verify Cargo Certification
                         </h2>
                         <p class="text-sm text-gray-600 dark:text-neutral-400">
-                            Enter a certificate Id number Or Upload Certifcate
+                            Choose verification method
                         </p>
                     </div>
-                    <div class="mb-4 sm:mb-8">
-                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Certificate Number</label>
-                        <input type="email" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                            placeholder="eg CertM192025">
+
+                    <!-- Toggle Switch -->
+                    <div class="flex justify-center mb-6">
+                        <div class="flex items-center space-x-4">
+                            <span 
+                                id="certificate-number-label" 
+                                class="text-sm text-gray-600 dark:text-neutral-400 cursor-pointer hover:text-black dark:hover:text-white transition-colors"
+                                data-method="certificate"
+                            >
+                                Certificate Number
+                            </span>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" id="verification-toggle">
+                                <div class="w-[60px] h-[32px] bg-gray-300 rounded-full peer peer-checked:bg-black dark:peer-checked:bg-white 
+                                    relative before:content-[''] before:absolute before:top-[2px] before:left-[2px] 
+                                    before:bg-white before:rounded-full before:h-[28px] before:w-[28px] 
+                                    before:transition-all peer-checked:before:translate-x-[28px]"></div>
+                            </label>
+                            <span 
+                                id="qr-code-label" 
+                                class="text-sm text-gray-600 dark:text-neutral-400 cursor-pointer hover:text-black dark:hover:text-white transition-colors"
+                                data-method="qr"
+                            >
+                                QR Code
+                            </span>
+                        </div>
                     </div>
 
+                    <!-- Certificate Number Input -->
+                    <div id="certificate-number-section">
+                        <div class="mb-4 sm:mb-8">
+                            <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Certificate Number</label>
+                            <input type="email" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                                placeholder="eg CertM192025">
+                        </div>
+                    </div>
 
-                    <form class="max-w-lg mx-auto">
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar">Upload Certificate (Optional)</label>
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar"
-                            type="file">
-                        <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help"></div>
-                    </form>
+                    <!-- QR Code Upload Section (Hidden by Default) -->
+                    <div id="qr-code-section" class="hidden">
+                        <form class="max-w-lg mx-auto">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="qr-code-upload">Scan QR Code</label>
+                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="qr-code-help" id="qr-code-upload"
+                                type="file" accept="image/*">
+                            <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="qr-code-help">Upload a QR code image to verify</div>
+                        </form>
+                    </div>
 
                     <!-- Checkbox -->
                     <div class="mt- flex items-center">
@@ -95,7 +81,6 @@
                                 website </label> <a class="text-blue-600 decoration-2 hover:underline  dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="../examples/html/signup.html">
                                     terms and conditions
                               </a>
-
                         </div>
                     </div>
                     <!-- End Checkbox -->
@@ -104,21 +89,45 @@
                             Verify
                         </a>
                     </div>
-
                 </form>
             </div>
             <!-- End Card -->
             <IMG class="w-28 mt-4 h-auto mx-auto mb-4" width="116" height="32" viewBox="0 0 116 32" fill="none" SRC="Happy Dance GIF by GETKICKBOX.gif">
-
         </div>
     </div>
-    <!-- End Comment Form -->
-    </div>
-    <!-- End Card Section -->
-    <!-- End Content -->
-    <!-- ========== END MAIN CONTENT ========== -->
+
+    <script>
+        // Get elements
+        const verificationToggle = document.getElementById('verification-toggle');
+        const certificateNumberSection = document.getElementById('certificate-number-section');
+        const qrCodeSection = document.getElementById('qr-code-section');
+        const certificateNumberLabel = document.getElementById('certificate-number-label');
+        const qrCodeLabel = document.getElementById('qr-code-label');
+
+        // Function to toggle sections
+        function toggleVerificationMethod(isCertificate) {
+            verificationToggle.checked = !isCertificate;
+            
+            if (isCertificate) {
+                certificateNumberSection.classList.remove('hidden');
+                qrCodeSection.classList.add('hidden');
+            } else {
+                certificateNumberSection.classList.add('hidden');
+                qrCodeSection.classList.remove('hidden');
+            }
+        }
+
+        // Toggle when labels are clicked
+        certificateNumberLabel.addEventListener('click', () => toggleVerificationMethod(true));
+        qrCodeLabel.addEventListener('click', () => toggleVerificationMethod(false));
+
+        // Original toggle event listener
+        verificationToggle.addEventListener('change', function() {
+            toggleVerificationMethod(!this.checked);
+        });
+    </script>
+
     <script src="preline.js"></script>
     <script src="flowbite.js"></script>
 </body>
-
 </html>

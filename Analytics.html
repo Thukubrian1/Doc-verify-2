@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agencify-Agent Register</title>
+    <title>Agencify-Agent portal</title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
 </head>
 
 <body class="bg-gray-50 dark:bg-slate-900">
+
 
     <!-- ========== HEADER ========== -->
     <header class="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full bg-white border-b text-sm py-2.5 sm:py-4 lg:ps-64 dark:bg-gray-800 dark:border-gray-700">
         <nav class="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8" aria-label="Global">
             <div class="me-5 lg:me-0 lg:hidden">
-                <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">Docverif</a>
+                <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">Agencify</a>
             </div>
 
             <div class="w-full flex items-center justify-end ms-auto sm:justify-between sm:gap-x-3 sm:order-3">
@@ -136,7 +141,6 @@
                     </a>
                 </li>
 
-
                 <li>
                     <a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="Analytics.html">
                         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -146,6 +150,7 @@
                         </svg>Analytics
                     </a>
                 </li>
+
 
                 <li class="hs-accordion" id="account-accordion">
                     <button type="button" class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
@@ -238,7 +243,7 @@
                         </ul>
                     </div>
                 </li>
-                
+
                 <li>
                     <a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="admbilling.html">
                         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -249,7 +254,7 @@
 
                     </a>
                 </li>
-                
+
                 <li>
                     <a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="Reports.html">
                         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -297,10 +302,9 @@
                                     Commissions
                                 </a>
                             </li>
+    
 
-                
-<!-- 
-                <li class="hs-accordion" id="projects-accordion">
+                <!-- <li class="hs-accordion" id="projects-accordion">
                     <button type="button" class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -336,143 +340,99 @@
                     </div>
                 </li> -->
 
-                
-  
+
             </ul>
         </nav>
     </div>
     <!-- End Sidebar -->
-     
-                    <!-- Comment Form -->
-                    <div class="max-w-[85rem] px-4 py-6 sm:px-6 lg:px-8 lg:py-6 mx-auto">
-                        <div class="mx-auto max-w-2xl">
-                
-                
-                            <!-- Card -->
-                            <div class="mt-15 p-4 relative z-10 bg-white border border-gray-200 rounded-xl sm:mt-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700">
-                                <form>
-                                    <div class="text-center mb-8">
-                                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-neutral-200">
-                                            Certificate details
-                                        </h2>
-                                    </div>
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Membership?</label>
-                                        <input type="text" value="Member" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                            placeholder="eg 987654B">
-                
-                                    </div>
-                
-                
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Account Type?</label>
-                                        <input type="text" value="Personal" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                            placeholder="eg 987654B">
-                                    </div>
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Name</label>
-                                        <input type="email" value="John" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                            placeholder="eg John">
-                                    </div>
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Mobile Number</label>
-                                        <input type="email" value="072000000" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                            placeholder="eg 07200000">
-                                    </div>
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">ID/Passport Number</label>
-                                        <input type="email" value="42456748" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                            placeholder="eg 37890222">
-                                    </div>
-                                    
-                                        <div class="mb-4 sm:mb-8">
-                                            <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Email</label>
-                                            <input type="email" value="john@gmail.com" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                                placeholder="eg 37890222">
-                                        </div>
-                                        <div class="mb-4 sm:mb-8">
-                                            <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Profession?</label>
-                                            <input type="email" value="Sales Manager" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                                placeholder="eg 37890222">
-                    
-                                        </div>
-                                        <div class="mb-4 sm:mb-8">
-                                            <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">KRA PIN</label>
-                                            <input type="email" value="A1234567U" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                                placeholder="eg A1234567U">
-                                        </div>
-                
-                                        <div class="mb-4 sm:mb-8">
-                                            <label class="block mb-2 text-sm font-medium dark:text-white">Documents</label>
-                                        
-                                            <!-- File 1 -->
-                                            <div class="flex items-center w-full border border-gray-300 rounded-lg p-2 bg-white dark:bg-neutral-900 dark:border-neutral-700">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="File Icon" class="w-8 h-8 mr-3">
-                                                <span id="file-name-1" class="flex-grow text-sm text-gray-700 dark:text-neutral-400">KRA PIN.png</span>
-                                                <input type="file" id="file-upload-1" class="hidden" onchange="updateFileName(this, 'file-name-1')">
 
-                                            </div>
-                                        
-                                            <!-- File 2 -->
-                                            <div class="flex items-center w-full border border-gray-300 rounded-lg p-2 bg-white dark:bg-neutral-900 dark:border-neutral-700 mt-2">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="File Icon" class="w-8 h-8 mr-3">
-                                                <span id="file-name-2" class="flex-grow text-sm text-gray-700 dark:text-neutral-400">ID/ PASSOPORT.png</span>
-                                                <input type="file" id="file-upload-2" class="hidden" onchange="updateFileName(this, 'file-name-2')">
 
-                                            </div>
-                                        
-                                            <!-- File 3 -->
-                                            <div class="flex items-center w-full border border-gray-300 rounded-lg p-2 bg-white dark:bg-neutral-900 dark:border-neutral-700 mt-2">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="File Icon" class="w-8 h-8 mr-3">
-                                                <span id="file-name-3" class="flex-grow text-sm text-gray-700 dark:text-neutral-400">C12.png</span>
-                                                <input type="file" id="file-upload-3" class="hidden" onchange="updateFileName(this, 'file-name-3')">
+    <!-- Content -->
+    <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
 
-                                            </div>
 
-                                            <!-- File 4 -->
-                                            <div class="flex items-center w-full border border-gray-300 rounded-lg p-2 bg-white dark:bg-neutral-900 dark:border-neutral-700 mt-2">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="File Icon" class="w-8 h-8 mr-3">
-                                                <span id="file-name-3" class="flex-grow text-sm text-gray-700 dark:text-neutral-400">Business Reg.png</span>
-                                                <input type="file" id="file-upload-3" class="hidden" onchange="updateFileName(this, 'file-name-3')">
+        <!-- Header -->
+        <div class="px-0 py-0 grid gap-3 md:flex md:justify-between md:items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- COO Issuance Trend -->
+                <div class="bg-white p-4 shadow-lg rounded-lg">
+                    <h2 class="text-lg font-bold mb-2">COO Issuance Trend</h2>
+                    <canvas id="issuanceChart"></canvas>
+                </div>
+        
+                <!-- Verified vs Flagged COOs -->
+                <div class="bg-white p-4 shadow-lg rounded-lg">
+                    <h2 class="text-lg font-bold mb-2">Verified vs Flagged COOs</h2>
+                    <canvas id="verifiedChart"></canvas>
+                </div>
+        
+                <!-- Top Exported Products -->
+                <div class="bg-white p-4 shadow-lg rounded-lg">
+                    <h2 class="text-lg font-bold mb-2">Top Exported Products</h2>
+                    <canvas id="productChart"></canvas>
+                </div>
+            </div>
+        
+            <script>
+                const issuanceData = {
+                    labels: ["Jan", "Feb", "Mar", "Apr"],
+                    datasets: [{
+                        label: "Issued COOs",
+                        data: [500, 600, 700, 800],
+                        borderColor: "#8884d8",
+                        backgroundColor: "rgba(136,132,216,0.2)",
+                    }]
+                };
+        
+                new Chart(document.getElementById("issuanceChart"), {
+                    type: "line",
+                    data: issuanceData,
+                });
+        
+                const verifiedData = {
+                    labels: ["Jan", "Feb", "Mar", "Apr"],
+                    datasets: [
+                        {
+                            label: "Verified COOs",
+                            data: [450, 550, 650, 750],
+                            backgroundColor: "#82ca9d"
+                        },
+                        {
+                            label: "Flagged COOs",
+                            data: [10, 15, 20, 25],
+                            backgroundColor: "#ff6666"
+                        }
+                    ]
+                };
+        
+                new Chart(document.getElementById("verifiedChart"), {
+                    type: "bar",
+                    data: verifiedData,
+                });
+        
+                const productData = {
+                    labels: ["Coffee", "Tea", "Fruits", "Flowers"],
+                    datasets: [{
+                        data: [40, 30, 15, 15],
+                        backgroundColor: ["#8884d8", "#82ca9d", "#ffcc00", "#ff6666"]
+                    }]
+                };
+        
+                new Chart(document.getElementById("productChart"), {
+                    type: "pie",
+                    data: productData,
+                });
+            </script>
+                    <!-- End  Individual Table Section -->
+                </div>
 
-                                            </div>
-                                        </div>
-                                        
-                                        <script>
-                                            function updateFileName(input, fileNameId) {
-                                                const fileName = input.files.length > 0 ? input.files[0].name : "document.png";
-                                                document.getElementById(fileNameId).textContent = fileName;
-                                            }
-                                        </script>
-                                        
-                                        </div>
-                                    </div>
-            
-                                </div>
+              
 
-                
-                                    </div>
-                                    <div class="mt-6 flex justify-center space-x-2.5">
-                                        <a href="Reports.html" class="w-32 py-3 px-4 inline-flex justify-center items-left gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-red-600 text-white hover:bg-red-700 focus:outline-none focus:bg-red-700 disabled:opacity-50 disabled:pointer-events-none text-center">
-                                            Reject
-                                        </a>
-                                        <a href="Reports.html" class="w-32 py-3 px-4 inline-flex justify-center items-left gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:bg-green-700 disabled:opacity-50 disabled:pointer-events-none text-center">
-                                            Approve
-                                        </a>
-                                    </div>
-                                    
-                                </form>
-                            </div>
-                            <!-- End Card -->
-                        </div>
-                    </div>
-                    <!-- End Comment Form -->
-                    </div>
-                    <!-- End Card Section -->
-                    <!-- End Content -->
-                    <!-- ========== END MAIN CONTENT ========== -->
-                    <script src="preline.js"></script>
-                    <script src="flowbite.js"></script>
+
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <script src="preline.js"></script>
+    <script src="flowbite.js"></script>
 </body>
 
 </html>
