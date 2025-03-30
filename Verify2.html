@@ -1,208 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocVerif-Agent Register</title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="style.css">
-
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DocVerif-compare</title>
-        <link rel="stylesheet" href="output.css">
-
-
-
-        <!-- ========== HEADER ========== -->
-        <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b text-sm py-2.5 sm:py-4 dark:bg-slate-900 dark:border-gray-700">
-            <nav class="max-w-7xl flex basis-full items-center w-full mx-auto px-4 sm:px-6 lg:px-8" aria-label="Global">
-                <div class="me-5 md:me-8">
-                    <a class="flex-none text-blue-600 text-xl font-semibold dark:text-white" href="#" aria-label="Brand">DocVerif</a>
-                </div>
-
-                <div class="w-full flex items-center justify-end ms-auto sm:justify-between sm:gap-x-3 sm:order-3">
-                    <div class="sm:hidden">
-                        <button type="button" class="inline-flex flex-shrink-0 justify-center items-center gap-2 size-[38px] rounded-full font-medium bg-white text-gray-700 align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs dark:bg-gray-800 dark:hover:bg-slate-800 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800">
-                            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="m21 21-4.3-4.3" /></svg>
-                        </button>
-                    </div>
-
-
-                    <!-- Progress -->
-                    <div class="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                        <div class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500" style="width: 25%"></div>
-                    </div>
-                    <!-- End Progress -->
-
-                </div>
-            </nav>
-
-        </header>
-
-
-        <!-- ========== END HEADER ========== -->
-
-    </head>
 </head>
 
 <body class="bg-gray-50 dark:bg-slate-900">
-
-    <!-- Comment Form -->
     <div class="max-w-[85rem] px-4 py-6 sm:px-6 lg:px-8 lg:py-6 mx-auto">
         <div class="mx-auto max-w-2xl">
+            <!-- Main Card -->
+            <div class="p-4 relative z-10 bg-white border border-gray-200 rounded-xl sm:mt-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-neutral-200">
+                        Verify Cargo Certification
+                    </h2>
+                </div>
 
-
-            <!-- Card -->
-            <div class="mt-15 p-4 relative z-10 bg-white border border-gray-200 rounded-xl sm:mt-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700">
                 <form>
-                    <div class="text-center mb-8">
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-neutral-200">
-                            Verify Cargo Certification
-                        </h2>
-                        <p class="text-sm text-gray-600 dark:text-neutral-400">
-                            Choose verification method
-                        </p>
+                    <!-- Verification Method Tabs -->
+                    <div class="flex border-b border-gray-200 mb-6">
+                        <button type="button" id="tab-certificate" class="tab-button py-4 px-6 text-blue-600 border-b-2 border-blue-600 font-medium">Certificate Number</button>
+                        <button type="button" id="tab-upload" class="tab-button py-4 px-6 text-gray-600 dark:text-gray-400 font-medium">Upload Certificate</button>
+                        <button type="button" id="tab-qr" class="tab-button py-4 px-6 text-gray-600 dark:text-gray-400 font-medium">Scan QR Code</button>
                     </div>
 
-                    <!-- Toggle Switch -->
-                    <div class="flex justify-center mb-6">
-                        <div class="flex items-center space-x-4">
-                            <span 
-                                id="certificate-number-label" 
-                                class="text-sm text-gray-600 dark:text-neutral-400 cursor-pointer hover:text-black dark:hover:text-white transition-colors"
-                                data-method="certificate"
-                            >
-                                Certificate Number
-                            </span>
-                            <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" value="" class="sr-only peer" id="verification-toggle">
-                                <div class="w-[60px] h-[32px] bg-gray-300 rounded-full peer peer-checked:bg-black dark:peer-checked:bg-white 
-                                    relative before:content-[''] before:absolute before:top-[2px] before:left-[2px] 
-                                    before:bg-white before:rounded-full before:h-[28px] before:w-[28px] 
-                                    before:transition-all peer-checked:before:translate-x-[28px]"></div>
-                            </label>
-                            <span 
-                                id="qr-code-label" 
-                                class="text-sm text-gray-600 dark:text-neutral-400 cursor-pointer hover:text-black dark:hover:text-white transition-colors"
-                                data-method="qr"
-                            >
-                                QR Code
-                            </span>
+                    <!-- Tab Contents -->
+                    <!-- Certificate Number Tab -->
+                    <div id="content-certificate" class="tab-content">
+                        <div class="bg-gray-100 p-4 rounded-lg flex items-start mb-6">
+                            <div class="bg-blue-500 rounded-full p-2 mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">Please enter your certificate number to verify its authenticity.</p>
                         </div>
-                    </div>
 
-                    <!-- Certificate Number Input -->
-                    <div id="certificate-number-section">
-                        <div class="mb-4 sm:mb-8">
-                            <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Certificate Number</label>
-                            <input type="email" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                        <!-- Certificate Number Field -->
+                        <div class="mb-6">
+                            <label for="certificate-number" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">Certificate Number</label>
+                            <input 
+                                type="text" 
+                                id="certificate-number" 
+                                class="py-3 px-4 block w-full border border-gray-300 rounded-lg text-gray-700"
                                 placeholder="eg CertM192025">
                         </div>
                     </div>
 
-                    <!-- QR Code Upload Section (Hidden by Default) -->
-                    <div id="qr-code-section" class="hidden">
-                        <form class="max-w-lg mx-auto">
-                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="qr-code-upload">Scan QR Code</label>
-                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="qr-code-help" id="qr-code-upload"
-                                type="file" accept="image/*">
-                            <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="qr-code-help">Upload a QR code image to verify</div>
-                        </form>
+                    <!-- Upload Certificate Tab -->
+                    <div id="content-upload" class="tab-content hidden">
+                        <div class="bg-gray-100 p-4 rounded-lg flex items-start mb-6">
+                            <div class="bg-blue-500 rounded-full p-2 mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">Upload your certificate document to verify its authenticity.</p>
+                        </div>
+
+                        <!-- Upload Field -->
+                        <div class="mb-6">
+                            <label for="certificate-upload" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">Upload Certificate</label>
+                            <input 
+                                class="block w-full py-3 px-4 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" 
+                                id="certificate-upload"
+                                type="file">
+                        </div>
                     </div>
 
-                    <!-- Checkbox -->
-                    <div class="mt- flex items-center">
+                    <!-- Scan QR Code Tab -->
+                    <div id="content-qr" class="tab-content hidden">
+                        <div class="bg-gray-100 p-4 rounded-lg flex items-start mb-6">
+                            <div class="bg-blue-500 rounded-full p-2 mr-3 flex-shrink-0">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">Scan the QR code on your certificate to verify its authenticity.</p>
+                        </div>
+
+                        <!-- QR Code Scanner -->
+                        <div class="mb-6 flex justify-center">
+                            <div class="border border-gray-300 rounded-lg p-4">
+                                <img width="150" height="150" src="barcode.png" alt="QR Code Scanner" class="mx-auto">
+                                <p class="text-center mt-2 text-sm text-gray-600">Align QR code within frame</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="mt-6 flex items-center">
                         <div class="flex">
-                            <input id="remember-me" name="remember-me" type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                            <input 
+                                id="terms-checkbox" 
+                                name="terms-checkbox" 
+                                type="checkbox" 
+                                class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
                         </div>
                         <div class="ms-3">
-                            <label for="remember-me" class=" dark:text-white">I have read and agree to the
-                                website </label> <a class="text-blue-600 decoration-2 hover:underline  dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="../examples/html/signup.html">
+                            <label for="terms-checkbox" class="dark:text-white">
+                                I have read and agree to the website 
+                                <a class="text-blue-600 decoration-2 hover:underline dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="../examples/html/signup.html">
                                     terms and conditions
-                              </a>
+                                </a>
+                            </label>
                         </div>
                     </div>
-                    <!-- End Checkbox -->
-                    <div class="mt-6 grid">
-                        <a href="success verification.html" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none text-center">
-                            Verify
+
+                    <br>
+                    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Verifying your certificate:</h2>
+                    <ul class="max-w-md space-y-2 text-gray-500 list-inside dark:text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 me-2 text-green-500 dark:text-green-400 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg> Document has been issues
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 me-2 text-green-500 dark:text-green-400 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg> Document issuer has been identified
+                        </li>
+                        <li class="flex items-center">
+                            <div role="status">
+                                <svg aria-hidden="true" class="w-4 h-4 me-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/><path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/></svg>
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            Document has not been tampered with
+                        </li>
+                    </ul>
+
+                    <!-- Verify Button -->
+                    <div class="mt-6">
+                        <a 
+                            href="success verification.html" 
+                            class="w-1/3 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-center">
+                            Continue
                         </a>
                     </div>
-
                 </form>
             </div>
             <!-- End Card -->
 
-            <br>
-            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Verifying your certificate:</h2>
-            <ul class="max-w-md space-y-2 text-gray-500 list-inside dark:text-gray-400">
-                <li class="flex items-center">
-                    <svg class="w-4 h-4 me-2 text-green-500 dark:text-green-400 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-        </svg> Document has been issued
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-4 h-4 me-2 text-green-500 dark:text-green-400 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-        </svg> Document user has been identified
-                </li>
-                <li class="flex items-center">
-                    <svg class="w-4 h-4 me-2 text-green-500 dark:text-green-400 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-        </svg> Document has not been tampered with
-                </li>
-            </ul>
-
-
+            <!-- Footer Image -->
+            <div class="text-center">
+                <img class="w-28 mt-4 h-auto mx-auto mb-4" src="Happy Dance GIF by GETKICKBOX.gif" alt="Happy Dance Animation">
+            </div>
         </div>
     </div>
-    <!-- End Comment Form -->
-    </div>
-    <!-- End Card Section -->
-    <!-- End Content -->
-    <!-- ========== END MAIN CONTENT ========== -->
 
     <script>
-        // Get elements
-        const verificationToggle = document.getElementById('verification-toggle');
-        const certificateNumberSection = document.getElementById('certificate-number-section');
-        const qrCodeSection = document.getElementById('qr-code-section');
-        const certificateNumberLabel = document.getElementById('certificate-number-label');
-        const qrCodeLabel = document.getElementById('qr-code-label');
-
-        // Function to toggle sections
-        function toggleVerificationMethod(isCertificate) {
-            verificationToggle.checked = !isCertificate;
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-button');
+            const contents = document.querySelectorAll('.tab-content');
             
-            if (isCertificate) {
-                certificateNumberSection.classList.remove('hidden');
-                qrCodeSection.classList.add('hidden');
-            } else {
-                certificateNumberSection.classList.add('hidden');
-                qrCodeSection.classList.remove('hidden');
-            }
-        }
-
-        // Toggle when labels are clicked
-        certificateNumberLabel.addEventListener('click', () => toggleVerificationMethod(true));
-        qrCodeLabel.addEventListener('click', () => toggleVerificationMethod(false));
-
-        // Original toggle event listener
-        verificationToggle.addEventListener('change', function() {
-            toggleVerificationMethod(!this.checked);
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => {
+                        t.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                        t.classList.add('text-gray-600', 'dark:text-gray-400');
+                    });
+                    
+                    // Add active class to clicked tab
+                    tab.classList.remove('text-gray-600', 'dark:text-gray-400');
+                    tab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+                    
+                    // Hide all content sections
+                    contents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    // Show corresponding content
+                    const contentId = 'content-' + tab.id.split('-')[1];
+                    document.getElementById(contentId).classList.remove('hidden');
+                });
+            });
         });
     </script>
-    
+
     <script src="preline.js"></script>
     <script src="flowbite.js"></script>
 </body>
-
 </html>

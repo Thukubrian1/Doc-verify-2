@@ -7,15 +7,18 @@
     <title>Agencify-Agent Register</title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="style.css">
+
+
 </head>
 
 <body class="bg-gray-50 dark:bg-slate-900">
 
     <!-- ========== HEADER ========== -->
     <header class="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full bg-white border-b text-sm py-2.5 sm:py-4 lg:ps-64 dark:bg-gray-800 dark:border-gray-700">
+
         <nav class="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8" aria-label="Global">
             <div class="me-5 lg:me-0 lg:hidden">
-                <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">Docverif</a>
+                <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">Brand</a>
             </div>
 
             <div class="w-full flex items-center justify-end ms-auto sm:justify-between sm:gap-x-3 sm:order-3">
@@ -146,6 +149,7 @@
                         </svg>Analytics
                     </a>
                 </li>
+                
 
                 <li class="hs-accordion" id="account-accordion">
                     <button type="button" class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
@@ -192,7 +196,8 @@
                         </ul>
                     </div>
                 </li>
-
+ 
+                
                 <li class="hs-accordion" id="account-accordion">
                     <button type="button" class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                         <svg class="flex-shrink-0 mt-0.5 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -238,7 +243,8 @@
                         </ul>
                     </div>
                 </li>
-                
+
+
                 <li>
                     <a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="admbilling.html">
                         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -249,13 +255,46 @@
 
                     </a>
                 </li>
-                
-                <li>
-                    <a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="Reports.html">
+
+                <li class="hs-accordion" id="account-accordion">
+                    <button type="button" class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg> Certificates
-                    </a>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
+                        Certificates
+
+                        <svg class="hs-accordion-active:block ms-auto hidden size-4" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6" /></svg>
+
+                        <svg class="hs-accordion-active:hidden ms-auto block size-4" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6" /></svg>
+                    </button>
+
+                    <div id="account-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
+                        <ul class="pt-2 ps-2">
+                            <li>
+                                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="Reports.html">
+                                    Recent Certificates
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="Generatecert.html">
+                                    Generate a Certificate
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="servicerequest.html">
+                                    Service Request
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
                 <li class="hs-accordion" id="account-accordion">
@@ -298,9 +337,8 @@
                                 </a>
                             </li>
 
-                
-<!-- 
-                <li class="hs-accordion" id="projects-accordion">
+
+                <!-- <li class="hs-accordion" id="projects-accordion">
                     <button type="button" class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                         <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -336,143 +374,189 @@
                     </div>
                 </li> -->
 
-                
-  
             </ul>
         </nav>
     </div>
     <!-- End Sidebar -->
-     
-                    <!-- Comment Form -->
+
+    <!-- Content -->
+    <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
+        <div>
+
+
+            <div class=" xl:pl-32">
+
+
+                <main>
                     <div class="max-w-[85rem] px-4 py-6 sm:px-6 lg:px-8 lg:py-6 mx-auto">
-                        <div class="mx-auto max-w-2xl">
-                
-                
-                            <!-- Card -->
-                            <div class="mt-15 p-4 relative z-10 bg-white border border-gray-200 rounded-xl sm:mt-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700">
-                                <form>
-                                    <div class="text-center mb-8">
-                                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-neutral-200">
-                                            Certificate details
-                                        </h2>
-                                    </div>
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Membership?</label>
-                                        <input type="text" value="Member" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                            placeholder="eg 987654B">
-                
-                                    </div>
-                
-                
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Account Type?</label>
-                                        <input type="text" value="Personal" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                            placeholder="eg 987654B">
-                                    </div>
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Name</label>
-                                        <input type="email" value="John" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                            placeholder="eg John">
-                                    </div>
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Mobile Number</label>
-                                        <input type="email" value="072000000" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                            placeholder="eg 07200000">
-                                    </div>
-                                    <div class="mb-4 sm:mb-8">
-                                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">ID/Passport Number</label>
-                                        <input type="email" value="42456748" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                            placeholder="eg 37890222">
-                                    </div>
-                                    
-                                        <div class="mb-4 sm:mb-8">
-                                            <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Email</label>
-                                            <input type="email" value="john@gmail.com" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                                placeholder="eg 37890222">
-                                        </div>
-                                        <div class="mb-4 sm:mb-8">
-                                            <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">Profession?</label>
-                                            <input type="email" value="Sales Manager" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                                placeholder="eg 37890222">
-                    
-                                        </div>
-                                        <div class="mb-4 sm:mb-8">
-                                            <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium dark:text-white">KRA PIN</label>
-                                            <input type="email" value="A1234567U" id="hs-feedback-post-comment-email-1" class="py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                                placeholder="eg A1234567U">
-                                        </div>
-                
-                                        <div class="mb-4 sm:mb-8">
-                                            <label class="block mb-2 text-sm font-medium dark:text-white">Documents</label>
-                                        
-                                            <!-- File 1 -->
-                                            <div class="flex items-center w-full border border-gray-300 rounded-lg p-2 bg-white dark:bg-neutral-900 dark:border-neutral-700">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="File Icon" class="w-8 h-8 mr-3">
-                                                <span id="file-name-1" class="flex-grow text-sm text-gray-700 dark:text-neutral-400">KRA PIN.png</span>
-                                                <input type="file" id="file-upload-1" class="hidden" onchange="updateFileName(this, 'file-name-1')">
-
-                                            </div>
-                                        
-                                            <!-- File 2 -->
-                                            <div class="flex items-center w-full border border-gray-300 rounded-lg p-2 bg-white dark:bg-neutral-900 dark:border-neutral-700 mt-2">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="File Icon" class="w-8 h-8 mr-3">
-                                                <span id="file-name-2" class="flex-grow text-sm text-gray-700 dark:text-neutral-400">ID/ PASSOPORT.png</span>
-                                                <input type="file" id="file-upload-2" class="hidden" onchange="updateFileName(this, 'file-name-2')">
-
-                                            </div>
-                                        
-                                            <!-- File 3 -->
-                                            <div class="flex items-center w-full border border-gray-300 rounded-lg p-2 bg-white dark:bg-neutral-900 dark:border-neutral-700 mt-2">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="File Icon" class="w-8 h-8 mr-3">
-                                                <span id="file-name-3" class="flex-grow text-sm text-gray-700 dark:text-neutral-400">C12.png</span>
-                                                <input type="file" id="file-upload-3" class="hidden" onchange="updateFileName(this, 'file-name-3')">
-
-                                            </div>
-
-                                            <!-- File 4 -->
-                                            <div class="flex items-center w-full border border-gray-300 rounded-lg p-2 bg-white dark:bg-neutral-900 dark:border-neutral-700 mt-2">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="File Icon" class="w-8 h-8 mr-3">
-                                                <span id="file-name-3" class="flex-grow text-sm text-gray-700 dark:text-neutral-400">Business Reg.png</span>
-                                                <input type="file" id="file-upload-3" class="hidden" onchange="updateFileName(this, 'file-name-3')">
-
-                                            </div>
-                                        </div>
-                                        
-                                        <script>
-                                            function updateFileName(input, fileNameId) {
-                                                const fileName = input.files.length > 0 ? input.files[0].name : "document.png";
-                                                document.getElementById(fileNameId).textContent = fileName;
-                                            }
-                                        </script>
-                                        
-                                        </div>
-                                    </div>
-            
+                        
+                            <!-- Certificate details and buttons moved completely outside the card -->
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 pb-4">
+                <div class="mb-4 sm:mb-0">
+                    <h2 class="text-xl sm:text-2xl font-bold text-gray-800 dark:text-neutral-200">
+                        Certificate details
+                    </h2>
+                    <p class="text-sm text-gray-500 mt-1">Manage certificate status here.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+                    <a href="Approvalnote.html" button id="approveBtn" class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:bg-green-700">
+                        Approve
+                    </button></a>
+                    <a href="Rejectreason.html" button id="rejectBtn" class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-red-600 text-white hover:bg-red-700 focus:outline-none focus:bg-red-700">
+                        Reject
+                    </button></a>
+                    <div class="relative">
+                        <button id="moreBtn" class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50">
+                            More <i class="fas fa-chevron-down ml-1"></i>
+                        </button>
+                        <div id="moreDropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 border border-gray-200">
+                            <div class="py-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Download</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Print</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Share</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Request more info</a>
+                            </div>
+                        </div>
+                    </div>
                                 </div>
-
-                
-                                    </div>
-                                    <div class="mt-6 flex justify-center space-x-2.5">
-                                        <a href="Reports.html" class="w-32 py-3 px-4 inline-flex justify-center items-left gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-red-600 text-white hover:bg-red-700 focus:outline-none focus:bg-red-700 disabled:opacity-50 disabled:pointer-events-none text-center">
-                                            Reject
-                                        </a>
-                                        <a href="Reports.html" class="w-32 py-3 px-4 inline-flex justify-center items-left gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:bg-green-700 disabled:opacity-50 disabled:pointer-events-none text-center">
-                                            Approve
-                                        </a>
-                                    </div>
-                                    
+                            </div>
+                            
+                            <!-- Card with Form Only -->
+                            <div class=" mt-5 p-6 relative z-10 bg-white border border-gray-200 rounded-xl  md:p-8 dark:bg-neutral-900 dark:border-neutral-700 shadow-sm">
+                                <form>
+                                    <!-- Two column layout for inputs -->
+                                    <form>
+                                        <!-- Two column layout for inputs that collapses to single column on mobile -->
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            <div class="mb-4">
+                                                <label for="name" class="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Name</label>
+                                                <input type="text" value="John" id="name" class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                            </div>
+                    
+                                            <div class="mb-4">
+                                                <label for="membership" class="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Membership</label>
+                                                <input type="text" value="Member" id="membership" class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                            </div>
+                    
+                                            <div class="mb-4">
+                                                <label for="account-type" class="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Account Type</label>
+                                                <input type="text" value="Personal" id="account-type" class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                            </div>
+                                            
+                                            <div class="mb-4">
+                                                <label for="mobile" class="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Mobile Number</label>
+                                                <input type="text" value="072000000" id="mobile" class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                            </div>
+                    
+                                            <div class="mb-4">
+                                                <label for="id-number" class="block mb-2 text-sm font-medium text-gray-700 dark:text-white">ID/Passport Number</label>
+                                                <input type="text" value="42456748" id="id-number" class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                            </div>
+                    
+                                            <div class="mb-4">
+                                                <label for="email" class="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Email</label>
+                                                <input type="email" value="john@gmail.com" id="email" class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                            </div>
+                    
+                                            <div class="mb-4">
+                                                <label for="profession" class="block mb-2 text-sm font-medium text-gray-700 dark:text-white">Profession</label>
+                                                <input type="text" value="Sales Manager" id="profession" class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                            </div>
+                    
+                                            <div class="mb-4">
+                                                <label for="kra-pin" class="block mb-2 text-sm font-medium text-gray-700 dark:text-white">KRA PIN</label>
+                                                <input type="text" value="A1234567U" id="kra-pin" class="py-2.5 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
+                                            </div>
+                                        </div>
+                                    </form>
                                 </form>
                             </div>
                             <!-- End Card -->
+                
+                            <div class="sm:flex mt-8 sm:items-center sm:justify-between">
+                                <div>
+                                    <p class="text-base font-bold text-gray-900">Activity Logs</p>
+                                    <p class="mt-1 text-sm font-medium text-gray-500">View your existing activities</p>
+                                </div>
+                            </div>
+
+                            <!-- Recent Notifications Section -->
+                            <div class=" mt-5 overflow-hidden bg-white border border-gray-200 rounded-xl">
+                                <div class="px-4 py-5 sm:p-6">
+                        
+                                    <div class="flow-root mt-">
+                                        <div class="-my-5 divide-y divide-gray-100">
+                                            <div class="py-5">
+                                                <div class="flex items-center">
+                                                    <div class="relative flex-shrink-0">
+                                                        <img class="object-cover w-10 h-10 rounded-full" src="https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/previews/settings/1/rareblocks-logo.png" alt="" />
+                                                    </div>
+                
+                                                    <div class="ml-4">
+                                                        <p class="text-sm font-bold text-blue-600">Certificate LTA/002/2025 approved by John Doe on 24th March 2025</p>
+                                                    </div>
+                
+                                                    <div class="ml-auto">
+                                                        <!-- <a href="cert details.html" title="" class="text-sm font-medium text-blue-600 transition-all duration-200 hover:text-blue-600"> View </a> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="py-5">
+                                                <div class="flex items-center">
+                                                    <div class="relative flex-shrink-0">
+                                                        <img class="object-cover w-10 h-10 rounded-full" src="https://landingfoliocom.imgix.net/store/collection/clarity-dashboard/images/previews/settings/1/astrona-logo.png" alt="" />
+                                                    </div>
+                
+                                                    <div class="ml-4">
+                                                        <p class="text-sm font-bold text-gray-900">Certificate LTA/002/2025 rejected by John Doe on 20th March 2025</p>
+                                                    </div>
+                
+                                                    <div class="ml-auto">
+                                                        <!-- <a href="All_Trans.html" title="" class="text-sm font-medium text-gray-600 transition-all duration-200 hover:text-blue-600"> View </a> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Recent Notifications Section -->
                         </div>
-                    </div>
-                    <!-- End Comment Form -->
-                    </div>
-                    <!-- End Card Section -->
-                    <!-- End Content -->
-                    <!-- ========== END MAIN CONTENT ========== -->
-                    <script src="preline.js"></script>
-                    <script src="flowbite.js"></script>
+                      </div>
+                <!-- End  Notification  Section -->
+                <script>
+                    // Toggle dropdown functionality
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const moreBtn = document.getElementById('moreBtn');
+                        const moreDropdown = document.getElementById('moreDropdown');
+                        
+                        // Initially hide the dropdown
+                        moreDropdown.classList.add('hidden');
+                        
+                        moreBtn.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            moreDropdown.classList.toggle('hidden');
+                        });
+                        
+                        // Close dropdown when clicking outside
+                        document.addEventListener('click', function(event) {
+                            if (!moreBtn.contains(event.target) && !moreDropdown.contains(event.target)) {
+                                moreDropdown.classList.add('hidden');
+                            }
+                        });
+                    });
+                </script>
+    </main>
+    </div>
+    </div>
+
+    </div>
+    <!-- End Content -->
+    <!-- ========== END MAIN CONTENT ========== -->
+    <script src="preline.js"></script>
+    <script src="flowbite.js"></script>
 </body>
 
 </html>
+
