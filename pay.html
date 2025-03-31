@@ -325,7 +325,7 @@
             
                             <div class="input-group">
                                 <label class="input-label">Amount (KES)</label>
-                                <input type="number" class="input-field" placeholder="Enter amount">
+                                <input type="number" class="input-field" value="40000" readonly>
                             </div>
                         </div>
             
@@ -355,7 +355,7 @@
             
                             <div class="input-group">
                                 <label class="input-label">Amount</label>
-                                <input type="number" class="input-field" placeholder="Enter amount">
+                                <input type="number" class="input-field" value="40000" readonly>
                             </div>
                         </div>
             
@@ -397,11 +397,25 @@
             
                             <div class="input-group">
                                 <label class="input-label">Amount</label>
-                                <input type="number" class="input-field" placeholder="Enter amount">
+                                <input type="number" class="input-field" value="40000" readonly>
                             </div>
                         </div>
             
                         <!-- Cheque Payment -->
+
+                        <div class="payment-content" id="cheque-content">
+                            <div class="input-group">
+                                <label class="input-label">Bank Name</label>
+                                <input type="text" class="input-field" placeholder="Enter Bank name">
+                            </div>
+            
+
+                            <div class="input-group">
+                                <label class="input-label">Code</label>
+                                <input type="number" class="input-field" placeholder="Enter code">
+                            </div>
+
+
                         <div class="payment-content" id="cheque-content">
                             <div class="input-group">
                                 <label class="input-label">Cheque Number</label>
@@ -411,7 +425,7 @@
 
                             <div class="input-group">
                                 <label class="input-label">Amount</label>
-                                <input type="number" class="input-field" placeholder="Enter amount">
+                                <input type="number" class="input-field" value="40000" readonly>
                             </div>
             
                             <div class="input-group">
@@ -424,7 +438,7 @@
                          <div class="payment-content" id="wallet-content">
                             <div class="input-group">
                                 <label class="input-label">Amount</label>
-                                <input type="number" id="amountInput" class="input-field" value="40000">
+                                <input type="number" id="amountInput" class="input-field" value="40000" readonly>
                             </div>
                             <p id="message" class="text-red-500 font-bold hidden">Insufficient funds in your wallet!</p><br>
                         </div>
@@ -568,4 +582,3 @@
 </body>
 
 </html>
-

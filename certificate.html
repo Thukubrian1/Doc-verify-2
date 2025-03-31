@@ -96,7 +96,7 @@
 <body class="bg-gray-50">
 
     <!-- Desktop Navigation Drawer - Hidden on mobile -->
-    <div id="desktop-drawer" class="desktop-drawer fixed top-0 left-0 h-full w-64 bg-blue-800 shadow-lg transform transition-transform duration-300 z-40 hidden md:block border-r border-gray-200">
+    <div id="desktop-drawer" class="desktop-drawer fixed top-0 left-0 h-full w-64 bg-blue-800 shadow-lg transform -translate-x-full transition-transform duration-300 z-50 hidden md:block border-r border-gray-200">
         <div class="p-5 border-b border-gray-200">
             <h2 class="text-xl font-semibold text-blue-800">DocVerif</h2>
         </div>
@@ -422,28 +422,27 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const drawerToggle = document.getElementById('drawer-toggle');
-            const drawer = document.getElementById('desktop-drawer');
-            const mainContent = document.getElementById('main-content');
-            let isDrawerOpen = false;
+        const drawerToggle = document.getElementById('drawer-toggle');
+        const drawer = document.getElementById('desktop-drawer');
+        const mainContent = document.getElementById('main-content');
+        let isDrawerOpen = false;
 
-            // Set initial state
-            drawer.classList.add('-translate-x-full');
+        // Remove the line that adds -translate-x-full class as it's already in the HTML
 
-            // Toggle drawer
-            drawerToggle.addEventListener('click', function() {
-                isDrawerOpen = !isDrawerOpen;
+        // Toggle drawer
+        drawerToggle.addEventListener('click', function() {
+            isDrawerOpen = !isDrawerOpen;
 
-                if (isDrawerOpen) {
-                    drawer.classList.remove('-translate-x-full');
-                    drawer.classList.add('translate-x-0');
-                    mainContent.classList.add('drawer-open');
-                } else {
-                    drawer.classList.add('-translate-x-full');
-                    drawer.classList.remove('translate-x-0');
-                    mainContent.classList.remove('drawer-open');
-                }
-            });
+            if (isDrawerOpen) {
+                drawer.classList.remove('-translate-x-full');
+                drawer.classList.add('translate-x-0');
+                mainContent.classList.add('drawer-open');
+            } else {
+                drawer.classList.add('-translate-x-full');
+                drawer.classList.remove('translate-x-0');
+                mainContent.classList.remove('drawer-open');
+            }
+        });
 
             // Handle resize
             window.addEventListener('resize', function() {
